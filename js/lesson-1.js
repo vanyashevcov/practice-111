@@ -16,10 +16,6 @@
 
 // alert(answer.toUpperCase() === "ECMASCRIPT" ? "Вірно!" : "Не знаєте? ECMAScript!")
 
-
-
-
-
 //2. Напишіть программу, яка отримує від користувача
 //число (кількість хвилин) через prompt і виводить у консоль
 //рядок у форматі годин та хвилин
@@ -35,8 +31,6 @@
 // minutes = String(minutes).padStart(2, "0");
 
 // console.log(`${hours}:${minutes}`);
-
-
 
 //3. Напишіть цикл, який виводить в консоль
 //числа от max до min по зменьшенню
@@ -66,8 +60,6 @@
 // }
 
 // console.log(getNumbers(1, 9));
-
-
 
 // 4. Змінна num може набувати 4 значення: 1, 2, 3 або 4 (запитуй число у користувача через prompt).
 // Якщо вона маєзначення '1', то у змінну result запишемо 'winter', якщо має значення '2' - 'spring' і т.д.
@@ -154,7 +146,6 @@
 
 // 7. Напишіть функцію, яка перевертатиме рядок у зворотньому порядку
 
-
 // function string(str) {
 //     let newstr = "";
 //     // // for (let i = str.length - 1; i >= 0; i--){
@@ -162,17 +153,14 @@
 //     // //     newstr += str[i];
 //     // }
 
-
 //     for (const element of str) {
 //         newstr = element + newstr
 //     }
 //     return newstr
-         
 
 // }
 // // string("hi")
 // console.log(string("independent"));
-
 
 // 8. Напишіть цикл, який пропонує ввести
 // число більше 100 через prompt.
@@ -182,11 +170,46 @@
 // введе число більше 100, чи не натисне кнопку
 // Cancel в prompt
 
-
 // let answer = prompt("enter number more then 100");
 // while (answer < 100 && answer) {
 //     answer = prompt("enter number more then 100")
-    
+
 // }
 // console.log(answer);
 
+// 9. В змінній minuteValue є число від 0 до 59.
+// Визначте до якої чверті години входить
+// це число(в першу, другу, треттю чи четверту).
+
+// const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
+
+// if (minuteValue <= 15) {
+//   console.log(`${minuteValue} - first quater`);
+// }
+// if (minuteValue > 15 && minuteValue <= 30) {
+//   console.log(`${minuteValue} - second quater`);
+// }
+// if (minuteValue > 30 && minuteValue <= 45) {
+//   console.log(`${minuteValue} - third quater`);
+// }
+// if (minuteValue > 45) {
+//   console.log(`${minuteValue} - fourth quater`);
+// }
+
+// 10. Є рядок, який складається із символів, наприклад, 'abcde'.
+// Перевірте, що першим символом цього рядка є літера 'a'.
+// Якщо це так - виведіть в alert 'Yes', в іншому випадку - 'No'.
+
+// const str = prompt("Enter string");
+// if (str.startsWith("a")) {
+//   alert("Yes");
+// } else {
+//   alert("No");
+// }
+
+// const str = prompt("Enter string");
+// if (str[0] === "a") {
+//   alert("Yes");
+// } else {
+//   alert("No");
+// }
