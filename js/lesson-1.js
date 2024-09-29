@@ -35,3 +35,63 @@
 // minutes = String(minutes).padStart(2, "0"); 
 
 // console.log(`${hours}:${minutes}`);
+
+
+
+//3. Напишіть цикл, який виводить в консоль
+//числа от max до min по зменьшенню
+//Виведіть в консоль суму усіх парних чисел
+// * перепиши код на функцію getNumbers(min, max)
+
+// const min = 1;
+// const max = 9;
+// let summa = 0;
+// for(let i=max; i>=min; i--) {
+//   console.log(i);
+//   if(i%2===0) {
+//     summa += i;
+//   } 
+// }
+// console.log(summa);
+
+// function getNumbers(min, max) {
+//   let summa = 0;
+//   for(let i=max; i>=min; i--) {
+//     console.log(i);
+//     if(i%2===0) {
+//       summa += i;
+//     }
+//   }
+//   return summa;
+// }
+
+// console.log(getNumbers(1, 9));
+
+
+
+// 4. Змінна num може набувати 4 значення: 1, 2, 3 або 4 (запитуй число у користувача через prompt).
+// Якщо вона маєзначення '1', то у змінну result запишемо 'winter', якщо має значення '2' - 'spring' і т.д.
+// Розв'яжіть завдання через switch-case.
+
+// let answer = prompt("Number?");
+// let result = '';
+
+// switch(answer) {
+//   case '1': 
+//     result = 'winter'; 
+//     break;
+//   case '2':
+//     result = 'spring';
+//     break;
+//   case '3':
+//     result = 'summer';
+//     break;
+//   case '4':
+//     result = 'autumn';
+//     break;
+//   default:
+//     result = 'Number from 1 to 4';
+// }
+
+// console.log(result);
+
