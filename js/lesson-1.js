@@ -31,8 +31,8 @@
 // let hours = Math.floor(answer / 60);
 // let minutes = answer % 60;
 
-// hours = String(hours).padStart(2, "0"); 
-// minutes = String(minutes).padStart(2, "0"); 
+// hours = String(hours).padStart(2, "0");
+// minutes = String(minutes).padStart(2, "0");
 
 // console.log(`${hours}:${minutes}`);
 
@@ -50,7 +50,7 @@
 //   console.log(i);
 //   if(i%2===0) {
 //     summa += i;
-//   } 
+//   }
 // }
 // console.log(summa);
 
@@ -77,8 +77,8 @@
 // let result = '';
 
 // switch(answer) {
-//   case '1': 
-//     result = 'winter'; 
+//   case '1':
+//     result = 'winter';
 //     break;
 //   case '2':
 //     result = 'spring';
@@ -151,3 +151,42 @@
 //     return "Error!";
 // }
 // console.log(checkNumber(1));
+
+// 7. Напишіть функцію, яка перевертатиме рядок у зворотньому порядку
+
+
+// function string(str) {
+//     let newstr = "";
+//     // // for (let i = str.length - 1; i >= 0; i--){
+//     // //     // console.log(str[i]);
+//     // //     newstr += str[i];
+//     // }
+
+
+//     for (const element of str) {
+//         newstr = element + newstr
+//     }
+//     return newstr
+         
+
+// }
+// // string("hi")
+// console.log(string("independent"));
+
+
+// 8. Напишіть цикл, який пропонує ввести
+// число більше 100 через prompt.
+// Якщо користувач ввів інше число - попросити
+// ввести ще раз.
+// Цикл повинен питати число, доки користувач не
+// введе число більше 100, чи не натисне кнопку
+// Cancel в prompt
+
+
+// let answer = prompt("enter number more then 100");
+// while (answer < 100 && answer) {
+//     answer = prompt("enter number more then 100")
+    
+// }
+// console.log(answer);
+
