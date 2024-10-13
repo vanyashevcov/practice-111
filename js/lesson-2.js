@@ -18,7 +18,7 @@
 // function logItems(array) {
 //   for(let i=0; i < array.length; i++) {
 //     console.log(`${i+1} - ${array[i]}`);
-    
+
 //   }
 // }
 // logItems(styles);
@@ -38,7 +38,7 @@
 //   //     alert(`Welcome, ${nameUser}!`);
 //   //     return;
 //   //   }
-    
+
 //   // }
 //   // alert("User not found");
 
@@ -46,3 +46,36 @@
 // }
 
 // checkLogin(logins);
+
+// 3. Напишіть функцію, яка складатиме сусідні числа і пушитиме їх в новий масив
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+// function sumNumbers(arr) {
+//   const newArr = [];
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     newArr.push(arr[i] + arr[i + 1]);
+//   }
+//   return newArr;
+// }
+
+// console.log(sumNumbers(someArr));
+
+// 4. Напишіть функцію calculateAverage()
+// яка приймає довільну кількість
+// аргументів і повертає їхнє середнє значення.
+// Додати перевірку, що аргументи це числа.
+
+// function calculateAverage() {
+//   let total = 0;
+//   let divider = arguments.length;
+//   for (const num of arguments) {
+//     if (typeof num === "number") {
+//       total += num;
+//     } else {
+//       divider -= 1;
+//     }
+//   }
+//   return total / divider;
+// }
+
+// console.log(calculateAverage(1, 5, 9, 7, "dsfas"));
