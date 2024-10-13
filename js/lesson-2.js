@@ -168,4 +168,72 @@
 //     sum += val;
 // }
 //  console.log(sum);
- 
+
+// 9. Напишіть ф-цію calcTotalPrice(fruits, fruitName),
+// яка приймає массив об'єктів і
+// рядок з назвою фрукта.
+// Функція рахує і повертає загальну вартість фрукта
+// з таким ім'ям, ціною та кількістю з об'єкта
+
+// const fruits = [
+//     { name: "Яблуко", price: 45, quantity: 7 },
+//     { name: "Апельсин", price: 60, quantity: 4 },
+//     { name: "Банан", price: 125, quantity: 8 },
+//     { name: "Груша", price: 350, quantity: 2 },
+//     { name: "Виноград", price: 440, quantity: 3 },
+//     { name: "Банан", price: 125, quantity: 3 },
+// ]
+
+// function calcTotalPrice(fruits, fruitName) {
+//     let totalPrice = 0;
+
+//     for (const fruit of fruits) {
+//         if (fruit.name === fruitName) {
+//             totalPrice += fruit.price * fruit.quantity;
+//         }
+//     }
+//     return totalPrice;
+// }
+
+// console.log(calcTotalPrice(fruits, "Банан"));
+
+// 10. Створіть об'єкт calculator з наступними методами:
+// read(a, b) - приймає два аргумента і зберігає їх
+// як властивості об'єкта
+// sum() повертає сумму збереженних значень (з перевіркою на наявність властивостей в об'єкті)
+// mult() перемножає збереженні значення і повертає результат (з перевіркою на наявність властивостей в об'єкті)
+// raise() возводить першу властивсть в ступінь другої і повертає результат (з перевіркою на наявність властивостей в об'єкті)
+// * винеси перевірку на наявність властивостей в об'єкті в окремий метод exist ()
+
+// const calculator = {
+//     read(a, b) {
+//         this.a = a;
+//         this.b = b;
+//     },
+//     sum(){
+//         if (this.exist()) {
+//             return this.a + this.b;
+//         }
+//         return "Values not found"
+//     },
+//     mult(){
+//         if (this.exist()) {
+//             return this.a * this.b;
+//         }
+//         return "Values not found"
+//     },
+//     raise(){
+//         if (this.exist()) {
+//             return this.a ** this.b;
+//         }
+//         return "Values not found"
+//     },
+//     exist(){
+//         return this.a && this.b;
+//     }
+// };
+
+// calculator.read(7, 2);
+// console.log(calculator.sum()); 
+// console.log(calculator.mult());
+// console.log(calculator.raise());
