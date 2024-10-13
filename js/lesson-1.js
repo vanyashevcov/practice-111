@@ -223,12 +223,12 @@
 // * Додати перевірку,що користувач ввів саме число,
 // а не довільний набір символів.
 
-let total = 0;
-let answer = prompt("Enter your number");
-while (answer) {
-  if (!Number.isNaN(Number(answer))) {
-    total += Number(answer);
-  }
-  answer = prompt("Enter your number");
-}
-alert(`Загальна сумма введенних чисел дорівнює ${total}.`);
+// let total = 0;
+// let answer = prompt("Enter your number");
+// while (answer) {
+//   if (!Number.isNaN(Number(answer))) {
+//     total += Number(answer);
+//   }
+//   answer = prompt("Enter your number");
+// }
+// alert(`Загальна сумма введенних чисел дорівнює ${total}.`);
