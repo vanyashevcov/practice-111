@@ -79,3 +79,49 @@
 // }
 
 // console.log(calculateAverage(1, 5, 9, 7, "dsfas"));
+
+
+
+// 5. Напишіть функцію, яка шукатиме найдовше слово у реченні
+// console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
+
+// function findLongestWord(string) {
+//     const words = string.split(" ");
+//     let longestWord = words[0];
+//     for (const word of words) {
+//         if (word.length > longestWord.length) {
+//             longestWord = word;
+//         }
+//     }
+//     return longestWord;
+// }
+
+// console.log(findLongestWord("London is the capital of Great Britain"));
+
+
+
+// 6. Напишіть функцію, яка перевіряє, чи є
+// рядок (без урахування регістра) паліндромом.
+// Паліндром — це слово, число, фраза або інша
+// послідовність символів, яка читається як
+// в обратному, так і в прямому напрямку, наприклад,
+// madam або racecar
+// console.log(isPalindrome("Abba")); //true
+// console.log(isPalindrome("hello")); //false
+
+
+// function isPalindrome(string) {
+//     let word = string.toLowerCase();
+//     // let reverWord = "";
+
+//     // for (let i = word.length - 1; i >= 0; i--) {
+//     //     reverWord += word[i];
+//     // }
+//     // return word === reverWord;
+
+//     return word === word.split("").reverse().join("");
+
+// }
+
+// console.log(isPalindrome("Abba")); //true
+// console.log(isPalindrome("hello")); //false
