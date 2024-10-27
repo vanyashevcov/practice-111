@@ -103,3 +103,47 @@ const tweets = [
 // }
 
 // console.log(getSortedUniqueTags(tweets));
+
+
+// 5. Напишіть функцію getStatisticsOfTags(array), яка приймає масив
+// і повертає об'єкт статистики, який враховує скільки разів повторюється кожен тег
+// в усіх користувачів разом (не для кожного окремо)
+// має бути відповідь: {js: 5, nodejs: 5, html: 2, css: 2, react: 4}
+
+
+// function getStatisticsOfTags(array) {
+//   return array.flatMap(user => user.tags)
+//     .reduce((stat, tag) => {
+//       if (stat[tag]) {
+//         stat[tag] += 1;
+//       } else {
+//         stat[tag] = 1;
+//       }
+//       return stat;
+//   }, {})
+// }
+
+// console.log(getStatisticsOfTags(tweets));
+
+
+// 7. Є масив чисел, наприклад: arr = [1,2,3,4,5]
+// Напишіть функцію getSums(arr), яка повертає масив його часткових сум.
+// Іншими словами, виклик getSums(arr) має повертати новий масив з такої ж
+// кількості елементів, в якому на кожній позиції буде сума елементів масива
+// до цієї позиції включно
+
+// Наприклад: для arr = [1,2,3,4,5]
+// getSums( arr ) = [ 1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4+5 ] = [ 1, 3, 6, 10, 15 ]
+// Функція не має змінювати вхідний масив
+// Використовуйте метод reduce
+
+// function getSums(arr) {
+//   return arr.reduce((newArray, item, index) => {
+//     newArray.push(item + newArray[index - 1] || item)
+//     return newArray;
+//   }, [])
+// }
+
+// console.log(getSums([1, 2, 3, 4, 5]));
+
+
