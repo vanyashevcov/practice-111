@@ -279,30 +279,124 @@ const tweets = [
 // і який успадковує клас Worker, додаючи метод getPosition
 // який повертає повідомлення "<name> works as <position>"
 
-class Worker{
-  constructor(name, salary){
+// class Worker{
+//   constructor(name, salary){
+//     this.name = name;
+//     this.salary = salary;
+//   }
+
+//   getSalary(){
+//     return `Worker ${this.name} has salary ${this.salary} dollars`;
+//   }
+// }
+
+// class WorkerPosition extends Worker{
+//   constructor(name, salary, position){
+//     super(name, salary);
+//     this.position = position;
+//   }
+
+//   getPosition(){
+//     return `${this.name} works as ${this.position}`
+//   }
+// }
+
+// const Jhon = new WorkerPosition("Jhon", 100, "developer");
+
+// console.log(Jhon.getSalary());
+// console.log(Jhon.getPosition());
+
+
+// 4. Функція askPassword приймає 2 колбека і викликає 1 із них в залежності від password
+// function askPassword(ok, fail) {
+//   let password = prompt("Password?");
+//   if (password === "admin") ok();
+//   else fail();
+// }
+// Створи об 'єкт user з властивостю name і двома методами
+// loginOk() і loginFail()
+// ці методи виводять в консоль повідомлення у форматі
+// "<name> logged in" та "<name> failed to log in" відповідно
+// зроби виклик функції askPassword, прив'язавши в якості аргументів методи об'єкта
+
+
+// function askPassword(ok, fail) {
+//   let password = prompt("Password?");
+//   if (password === "admin") ok();
+//   else fail();
+// }
+
+// const user = {
+//   name: 'Kolia',
+//   loginOk() {
+//     console.log(`${this.name} logged in`)
+//   },
+//   loginFail() {
+//     console.log(`${this.name} failed to log in`);
+    
+//   }
+// }
+
+// askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+
+// 10. Знайти найдорожчий продукт у категорії "meat"
+// Напиши для цього функцію getMostExpensiveMeatProduct(products)
+
+// const products = [
+//   { name: 'Apple', category: 'fruits', price: 1.2, stock: 50 },
+//   { name: 'Banana', category: 'fruits', price: 0.8, stock: 100 },
+//   { name: 'Carrot', category: 'vegetables', price: 0.5, stock: 200 },
+//   { name: 'Broccoli', category: 'vegetables', price: 1.0, stock: 150 },
+//   { name: 'Milk', category: 'dairy', price: 1.5, stock: 20 },
+//   { name: 'Cheese', category: 'dairy', price: 2.5, stock: 5 },
+//   { name: 'Chicken', category: 'meat', price: 5.0, stock: 30 },
+//   { name: 'Beef', category: 'meat', price: 7.0, stock: 25 },
+//   { name: 'Sheep', category: 'meat', price: 9.0, stock: 30 },
+//   { name: 'Cow', category: 'meat', price: 2.0, stock: 25 }
+// ];
+
+// function getMostExpensiveMeatProduct(products) {
+//   return products.filter(product => product.category === 'meat')
+//                 .reduce((mostExpensiveMeatProduct, product) => {
+//                   if(mostExpensiveMeatProduct.price < product.price) {
+//                     return product;
+//                   }
+//                   return mostExpensiveMeatProduct;
+//                 })
+// }
+
+// console.log(getMostExpensiveMeatProduct(products));
+
+// 5. Створити клас Contact для створення контакта з полями name, email і phone.
+// Потім створиnb клас ContactBook, який буде зберігати список контактів
+// і надавати методи для додавання, видалення та пошуку контактів.
+
+class Contact {
+  constructor(name, email, phone) {
     this.name = name;
-    this.salary = salary;
-  }
-
-  getSalary(){
-    return `Worker ${this.name} has salary ${this.salary} dollars`;
+    this.email = email;
+    this.phone = phone;
   }
 }
 
-class WorkerPosition extends Worker{
-  constructor(name, salary, position){
-    super(name, salary);
-    this.position = position;
+class ContactBook {
+  constructor() {
+    this.contacts = []
   }
 
-  getPosition(){
-    return `${this.name} works as ${this.position}`
+  addContact(contact) {
+    this.contacts.push(contact);
   }
+
+  removeContact(name){}
+
+  findContact(name){}
 }
 
-const Jhon = new WorkerPosition("Jhon", 100, "developer");
+const contactBook = new ContactBook();
 
-console.log(Jhon.getSalary());
-console.log(Jhon.getPosition());
+const contact1 = new Contact('Kolia', 'dsde@gmail.com', '8767234');
 
+contactBook.addContact(contact1);
+
+console.log(contactBook);
