@@ -104,12 +104,10 @@ const tweets = [
 
 // console.log(getSortedUniqueTags(tweets));
 
-
 // 5. Напишіть функцію getStatisticsOfTags(array), яка приймає масив
 // і повертає об'єкт статистики, який враховує скільки разів повторюється кожен тег
 // в усіх користувачів разом (не для кожного окремо)
 // має бути відповідь: {js: 5, nodejs: 5, html: 2, css: 2, react: 4}
-
 
 // function getStatisticsOfTags(array) {
 //   return array.flatMap(user => user.tags)
@@ -124,7 +122,6 @@ const tweets = [
 // }
 
 // console.log(getStatisticsOfTags(tweets));
-
 
 // 7. Є масив чисел, наприклад: arr = [1,2,3,4,5]
 // Напишіть функцію getSums(arr), яка повертає масив його часткових сум.
@@ -146,4 +143,78 @@ const tweets = [
 
 // console.log(getSums([1, 2, 3, 4, 5]));
 
+// 1. Створи клас User для створення користувача з такими властивостями:
+// a. userName - ім'я, рядок
+// b. age - вік, число
+// c. numberOfPosts - кількість постів, число
+// d. конструктор очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+// Додай метод getInfo(), який повертає рядок:
+// `Користувачеві <name> <age> років і в нього <posts> публікацій.`
+// Додай метод updateNumberOfPosts(amount), який оновлює кількість постів юзера
+// де amount - це число, кількість постів, що має додаватись до вже існуючих у властивості numbersOfPost
 
+// class User {
+//   constructor(object) {
+//     this.userName = object.userName;
+//     this.age = object.age;
+//     this.numberOfPosts = object.numberOfPosts;
+//   }
+
+//   getInfo() {
+//     return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numberOfPosts} публікацій.`;
+//   }
+
+//   updateNumberOfPosts(amount) {
+//     this.numberOfPosts += amount;
+//   }
+// }
+
+// const someUser = new User({
+//   userName: "Petya",
+//   age: 22,
+//   numberOfPosts: 5,
+// });
+
+// console.log(someUser);
+
+// console.log(someUser.getInfo());
+
+// someUser.updateNumberOfPosts(5);
+
+// console.log(someUser);
+
+// 2. Напиши класс Client який створює об'єкт
+// із властивостями login, email
+// Об'яви приватні властивості #login і #email,
+// доступ до яких зроби через геттер и сеттер:
+// get getClientData() має повертати об'єкт з переліченими властивостями
+// set changeEmail(newEmail) перезаписує пошту користувача
+
+class Client {
+  #login;
+  #email;
+
+  constructor(login, email) {
+    this.#login = login;
+    this.#email = email;
+  }
+
+  get getClientData() {
+    return {
+      login: this.#login,
+      email: this.#email,
+    };
+  }
+
+  set changeEmail(newEmail) {
+    this.#email = newEmail;
+  }
+}
+
+const someClient = new Client("Petya", "petya@gmail.com");
+
+console.log(someClient.getClientData);
+
+someClient.changeEmail = "superPetya@gmail.com";
+
+console.log(someClient.getClientData.email);
