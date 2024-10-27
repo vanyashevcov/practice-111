@@ -190,31 +190,119 @@ const tweets = [
 // get getClientData() має повертати об'єкт з переліченими властивостями
 // set changeEmail(newEmail) перезаписує пошту користувача
 
-class Client {
-  #login;
-  #email;
+// class Client {
+//   #login;
+//   #email;
 
-  constructor(login, email) {
-    this.#login = login;
-    this.#email = email;
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+
+//   get getClientData() {
+//     return {
+//       login: this.#login,
+//       email: this.#email,
+//     };
+//   }
+
+//   set changeEmail(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// const someClient = new Client("Petya", "petya@gmail.com");
+
+// console.log(someClient.getClientData);
+
+// someClient.changeEmail = "superPetya@gmail.com";
+
+// console.log(someClient.getClientData.email);
+
+// 3. Напиши класс Notes який управляє коллекцієй нотаток у
+// властивості items.
+// Нотатка це  об'єкт з властивостями text, priority
+// Додай класу статичну властивість Priority,
+// в якій буде зберігатись об'єкт з пріорітетами ("high", "middle", "low").
+// Додай методи getNotes(), addNote(note), removeNote(noteText)
+// updatePriority(noteText, newPriority),
+
+// class Notes {
+//   static Priority = {
+//     HIGH: "high",
+//     MIDDLE: "middle",
+//     LOW: "low"
+//   };
+
+//   constructor (){
+//     this.items = [];
+//   }
+
+//   getNotes(){
+//     return this.items;
+//   }
+
+//   addNote(note){
+//     this.items.push(note);
+//   }
+
+//   removeNote(noteText){
+//     this.items = this.items.filter(item => item.text !== noteText);
+//   }
+
+//   updatePriority(noteText, newPriority){
+//     const note = this.items.find(item => item.text === noteText);
+//     if (note) {
+//       note.priority = newPriority;
+//     }
+//   }
+// }
+
+// const notes = new Notes();
+
+// notes.addNote({text: "Java", priority: Notes.Priority.HIGH});
+// notes.addNote({text: "Node.js", priority: Notes.Priority.LOW});
+// notes.addNote({text: "html", priority: Notes.Priority.MIDDLE});
+
+// console.table(notes.getNotes());
+
+// notes.removeNote("html");
+
+// notes.updatePriority("Java", Notes.Priority.LOW);
+
+// console.table(notes.getNotes());
+
+// 4. Створити клас Worker, у якого є властивості name і salary.
+// У класу Worker є метод getSalary, який повертає повідомлення
+// "Worker <name> has salary <salary> dollars"
+// Створити клас WorkerPosition, у якого є властивість position
+// і який успадковує клас Worker, додаючи метод getPosition
+// який повертає повідомлення "<name> works as <position>"
+
+class Worker{
+  constructor(name, salary){
+    this.name = name;
+    this.salary = salary;
   }
 
-  get getClientData() {
-    return {
-      login: this.#login,
-      email: this.#email,
-    };
-  }
-
-  set changeEmail(newEmail) {
-    this.#email = newEmail;
+  getSalary(){
+    return `Worker ${this.name} has salary ${this.salary} dollars`;
   }
 }
 
-const someClient = new Client("Petya", "petya@gmail.com");
+class WorkerPosition extends Worker{
+  constructor(name, salary, position){
+    super(name, salary);
+    this.position = position;
+  }
 
-console.log(someClient.getClientData);
+  getPosition(){
+    return `${this.name} works as ${this.position}`
+  }
+}
 
-someClient.changeEmail = "superPetya@gmail.com";
+const Jhon = new WorkerPosition("Jhon", 100, "developer");
 
-console.log(someClient.getClientData.email);
+console.log(Jhon.getSalary());
+console.log(Jhon.getPosition());
+
