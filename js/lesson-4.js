@@ -197,3 +197,55 @@
     
 // }
 
+//  8. При натисканні на будь-який рядок у табличці відобразіть
+//  повідомлення з назвою продукту та його ціною.
+//  "Ви вибрали <product> за <price>".
+
+// const table = document.querySelector("#productTable");
+// const div = document.querySelector("#productDetails");
+
+// table.addEventListener("click", (event) => {
+
+//     if (event.target.nodeName !== "TD") {
+//         return;
+//     }
+
+//     const parent = event.target.parentNode;
+//     const product = parent.firstElementChild.textContent;
+//     const price = parent.lastElementChild.textContent;
+    
+//     div.textContent = `Ви вибрали ${product} за ${price}`;
+// });
+
+// 9. При натисканні на кожну з кнопок підсумовуються значення з data-атрибутів.
+// За натисканням на кнопку "Вивести результат" виводиться сума значення, а також статистика з
+// інформацією про те, яка кнопка була натиснута скільки разів.
+
+const statList = document.querySelector(".statList");
+const button = document.querySelector("#resultButton");
+const resultSection = document.querySelector("#resultSection");
+let total = 0;
+statList.addEventListener("click", countButtons);
+function countButtons(event) {
+    if (!event.target.classList.contains("calcButton")) {
+        return;
+    }
+    const num = Number(event.target.dataset.number);
+    total += num;
+};
+
+button.addEventListener("click", showResult);
+function showResult() {
+    resultSection.textContent = `Загальне значення - ${total}`;
+    total = 0;
+}
+
+
+
+
+
+
+
+
+
+// 6. Видалити зі списку елементи, які позначені (поставлена галочка чек)
