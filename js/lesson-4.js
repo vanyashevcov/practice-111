@@ -139,3 +139,61 @@
 //   `).join('');
 
 // ul.insertAdjacentHTML('beforeend', markup);
+
+
+
+// 4. Кнопка "Приховати" ховає текст і замінює назву кнопки на
+// "Розкрити", при повторному натисканні текст знову стає доступним
+// і кнопка набуває початкового вигляду.
+
+// const input = document.querySelector("#passwordInput");
+// const button = document.querySelector("#passwordButton");
+
+// button.addEventListener("click", handleClicker);
+// function handleClicker() {
+//     if (button.textContent === "Розкрити") {
+//         button.textContent = "Приховати";
+//          input.style.color = "inherit";
+//     }
+//     else{
+//         button.textContent = "Розкрити";
+//     input.style.color = "transparent";
+//     }
+// }
+
+
+// 5. Натиснувши кнопку "Подвоювати", збільшити значення
+// у кожному елементі списку у 2 рази
+
+
+// const button = document.querySelector("#double");
+// const items = document.querySelectorAll(".listItem");
+
+// button.addEventListener("click", handleClicker);
+// function handleClicker() {
+//     items.forEach(item => {
+//         item.textContent *= 2;
+//     })
+// }
+
+
+// 7. Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
+// Додати класи на список eventList, на елементи eventCode та eventKey
+
+// const div = document.querySelector(".eventThumb");
+
+// document.addEventListener("keydown", keyClicker);
+// function keyClicker(event) {
+
+//     const markup = ` 
+//     <ul class="eventList">
+//         <li class="eventCode"> ${event.code}</li>
+//         <li class="eventKey"> ${event.key}</li>
+//       </ul>`
+    
+//     div.insertAdjacentHTML("beforeend", markup);
+   
+    
+    
+// }
+
